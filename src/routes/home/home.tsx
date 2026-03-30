@@ -8,6 +8,13 @@ import wpp_icon from "../../assets/imgs/home_imgs/wppIcon.png";
 import pix_img from "../../assets/imgs/home_imgs/price_imgs/pix_image.png"
 import money_img from "../../assets/imgs/home_imgs/price_imgs/money_image.png";
 
+//Imagens de pessoas ficticias:
+import person_1 from "../../assets/imgs/people/person1.png";
+import person_2 from "../../assets/imgs/people/person2.png";
+import person_3 from "../../assets/imgs/people/person3.png";
+import person_4 from "../../assets/imgs/people/person4.png";
+
+
 const Home = () => {
     return (
         <>
@@ -98,44 +105,76 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div>
-                    <p></p>
+                <div className={style.wpp_contact_call}>
+                    <h2>Se interessou? Entre em contato pelo WhatsApp:</h2>
                     <button>
-                        <img src="" alt="" />
-                        <p></p>
+                        <img src={wpp_icon} alt="WhatsApp icone" />
+                        <p>Chat on WhatsApp</p>
                     </button>
-                </div> */}
+                </div>
             </section>
-            {/* 
-            <section>
-                <h2></h2>
-                <div>
-                    <div>
-                        <img src="" alt="" />
-                        <p></p>
-                        <div></div>
-                        <p></p>
+
+            <section className={`${style.home_section} ${style.container_evaluation}`}>
+                <h2>Veja as avaliações de nossos clientes:</h2>
+                <div className={style.carousel_evaluation}>
+                    <div className={style.evaluation_card}>
+                        <img src={person_1} alt="Imagem pessoa" style={{ gridArea: "evaluation_item_1" }} />
+                        <p className={style.person_name_evaluation} style={{ gridArea: "evaluation_item_2" }}>Pedro</p>
+                        <div className={style.container_stars} style={{ gridArea: "evaluation_item_3" }}>
+                            <p className={style.star_1}>★</p>
+                            <p className={style.star_2}>★</p>
+                            <p className={style.star_3}>★</p>
+                            <p className={style.star_4}>★</p>
+                            <p className={style.star_5}>★</p>
+                        </div>
+                        <p style={{ gridArea: "evaluation_item_4" }} className={style.evaluation_text}>"Excelente serviço."</p>
                     </div>
-                    <div>
-                        <img src="" alt="" />
-                        <p></p>
-                        <div></div>
-                        <p></p>
+                    <div className={style.evaluation_card}>
+                        <img src={person_2} alt="Imagem pessoa" style={{ gridArea: "evaluation_item_1" }} />
+                        <p className={style.person_name_evaluation} style={{ gridArea: "evaluation_item_2" }}>Ana</p>
+                        <div className={style.container_stars} style={{ gridArea: "evaluation_item_3" }}>
+                            <p className={style.star_1}>★</p>
+                            <p className={style.star_2}>★</p>
+                            <p className={style.star_3}>★</p>
+                            <p className={style.star_4}>★</p>
+                            <p className={style.star_5}>★</p>
+                        </div>
+                        <p style={{ gridArea: "evaluation_item_4" }} className={style.evaluation_text}>"Serviço muito bom. Aprendi super rápido."</p>
                     </div>
-                    <div>
-                        <img src="" alt="" />
-                        <p></p>
-                        <div></div>
-                        <p></p>
+                    <div className={style.evaluation_card}>
+                        <img src={person_3} alt="Imagem pessoa" style={{ gridArea: "evaluation_item_1" }} />
+                        <p className={style.person_name_evaluation} style={{ gridArea: "evaluation_item_2" }}>Maria</p>
+                        <div className={style.container_stars} style={{ gridArea: "evaluation_item_3" }}>
+                            <p className={style.star_1}>★</p>
+                            <p className={style.star_2}>★</p>
+                            <p className={style.star_3}>★</p>
+                            <p className={style.star_4}>★</p>
+                            <p className={style.star_5}>★</p>
+                        </div>
+                        <p style={{ gridArea: "evaluation_item_4" }} className={style.evaluation_text}>"Tive um pouco de dificuldade no ínicio, mas todas as minhas dúvidas foram atendidas."</p>
                     </div>
-                    <div>
-                        <img src="" alt="" />
-                        <p></p>
-                        <div></div>
-                        <p></p>
+                    <div className={style.evaluation_card}>
+                        <img src={person_4} alt="Imagem pessoa" style={{ gridArea: "evaluation_item_1" }} />
+                        <p className={style.person_name_evaluation} style={{ gridArea: "evaluation_item_2" }}>Isabela</p>
+                        <div className={style.container_stars} style={{ gridArea: "evaluation_item_3" }}>
+                            <p className={style.star_1}>★</p>
+                            <p className={style.star_2}>★</p>
+                            <p className={style.star_3}>★</p>
+                            <p className={style.star_4}>★</p>
+                            <p className={style.star_5}>★</p>
+                        </div>
+                        <p style={{ gridArea: "evaluation_item_4" }} className={style.evaluation_text}>"Excelente serviço e suporte para o cliente."</p>
                     </div>
                 </div>
-            </section> */}
+                <div className={style.container_evaluation_buttons}>
+                    <input type="radio" name="evaluation_page" id="page_1" className={style.evaluation_button} />
+                    <label htmlFor="page_1"></label>
+                    <input type="radio" name="evaluation_page" id="page_2" className={style.evaluation_button} />
+                    <label htmlFor="page_2"></label>
+                    <input type="radio" name="evaluation_page" id="page_3" className={style.evaluation_button} />
+                    <label htmlFor="page_3"></label>
+                </div>
+            </section>
         </>
     )
 }

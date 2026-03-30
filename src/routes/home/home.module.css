@@ -37,7 +37,8 @@
   text-align: center;
 }
 
-.contact {
+.contact,
+.wpp_contact_call {
   width: 100%;
   display: flex;
   align-items: center;
@@ -51,7 +52,8 @@
   font-size: 1.5em;
 }
 
-.contact > button {
+.contact > button,
+.wpp_contact_call > button {
   cursor: pointer;
   background-image: linear-gradient(#04bf33, var(--wpp_color));
   color: white;
@@ -67,8 +69,20 @@
   box-shadow: 0px 0px 2px gray;
 }
 
-.contact > button > img {
+.contact > button > img,
+.wpp_contact_call > button > img {
   width: 30px;
+}
+
+.wpp_contact_call {
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+}
+
+.wpp_contact_call > h2 {
+  width: 100%;
+  max-width: 425px;
 }
 
 .container_services {
@@ -224,4 +238,103 @@ tr:last-child td {
 
 .payment_line > img {
   width: 30px;
+}
+
+.container_evaluation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.carousel_evaluation {
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.evaluation_card {
+  height: 270px;
+  width: 200px;
+  background-color: white;
+  border: solid 2px var(--bg_color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px var(--bg_color);
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 30% 35% 35%;
+  grid-template-rows: 45px 25px 200px;
+  row-gap: 10px;
+  grid-template-areas:
+    "evaluation_item_1 evaluation_item_2 evaluation_item_2"
+    "evaluation_item_3 evaluation_item_3 evaluation_item_3"
+    "evaluation_item_4 evaluation_item_4 evaluation_item_4";
+  align-items: center;
+}
+
+.person_name_evaluation {
+  justify-self: baseline;
+}
+
+.evaluation_text {
+  align-self: self-start;
+}
+
+.evaluation_card > img {
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.container_stars {
+  display: flex;
+  column-gap: 1px;
+  font-size: 1.4em;
+}
+
+.container_evaluation_buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.evaluation_button {
+  display: none;
+}
+
+.container_evaluation_buttons > label {
+  background-color: white;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.container_evaluation_buttons > label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  background-color: var(--bg_color);
+  transition:
+    height 0.2s ease,
+    width 0.2s ease;
+}
+
+.evaluation_button:checked + label::before {
+  height: 15px;
+  width: 15px;
 }
