@@ -1,0 +1,5 @@
+.container_stars {
+  display: flex;
+  column-gap: 1px;
+  font-size: 1.4em;
+}

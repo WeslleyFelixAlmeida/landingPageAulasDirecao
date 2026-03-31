@@ -1,0 +1,42 @@
+.service_card {
+  display: grid;
+  grid-template-rows: 150px 150px 50px;
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  border: solid 1px var(--bg_color);
+  border-radius: 10px;
+  overflow: hidden;
+  grid-template-areas:
+    "service_grid1"
+    "service_grid1"
+    "service_grid2";
+  align-items: center;
+}
+
+.service_card > img {
+  width: 100%;
+  aspect-ratio: 4 / 4;
+  object-fit: cover;
+}
+
+.service_card > p {
+  font-weight: bold;
+  font-size: 1.4em;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg_color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1050px) {
+  .service_card {
+    max-width: 100%;
+  }
+
+  .service_card > img {
+    aspect-ratio: 4 / 3;
+  }
+}
