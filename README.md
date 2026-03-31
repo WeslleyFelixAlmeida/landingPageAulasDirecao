@@ -1,73 +1,90 @@
-# React + TypeScript + Vite
+# 🚗 Landing Page — Aulas de Direção
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma landing page moderna e responsiva desenvolvida para a venda de serviços de aprendizagem de condução de veículos. O projeto tem como objetivo apresentar os serviços oferecidos, diferenciais e facilitar o contato de potenciais alunos com o instrutor.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Visão Geral
 
-## React Compiler
+Esta página foi criada como um exemplo de landing page voltada para o mercado de autoescolas e instrutores de direção independentes. Ela é focada em conversão, apresentando os serviços de forma clara e objetiva para atrair novos alunos.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **[React 19](https://react.dev/)** — Biblioteca para construção da interface
+- **[TypeScript](https://www.typescriptlang.org/)** — Tipagem estática para maior segurança no desenvolvimento
+- **[Vite](https://vite.dev/)** — Ferramenta de build ultrarrápida
+- **[React Router DOM v7](https://reactrouter.com/)** — Gerenciamento de rotas
+- **CSS** — Estilização customizada dos componentes
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Estrutura do Projeto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+landingPageAulasDirecao/
+├── src/               # Código-fonte da aplicação
+├── index.html         # Arquivo HTML principal
+├── vite.config.ts     # Configuração do Vite
+├── tsconfig.json      # Configuração do TypeScript
+├── eslint.config.js   # Configuração do ESLint
+└── package.json       # Dependências e scripts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Como Rodar o Projeto
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) versão 18 ou superior
+- npm ou yarn instalado
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/WeslleyFelixAlmeida/landingPageAulasDirecao.git
+
+# Acesse a pasta do projeto
+cd landingPageAulasDirecao
+
+# Instale as dependências
+npm install
 ```
+
+### Scripts disponíveis
+
+```bash
+# Iniciar o servidor de desenvolvimento
+npm run dev
+
+# Gerar build de produção
+npm run build
+
+# Pré-visualizar o build de produção
+npm run preview
+
+# Executar o linter
+npm run lint
+```
+
+---
+
+## ✨ Funcionalidades
+
+- Apresentação dos serviços de aulas de direção
+- Seção de diferenciais e benefícios
+- Layout responsivo para dispositivos móveis e desktop
+- Estrutura otimizada para conversão de visitantes em alunos
+
+---
+
+## 📄 Licença
+
+Este projeto é de uso livre para fins de estudo e aprendizado.
+
+---
+
+Desenvolvido por [Weslley Felix Almeida](https://github.com/WeslleyFelixAlmeida)
