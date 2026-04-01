@@ -1,9 +1,9 @@
-import "./footer.module.css";
+import style from "./footer.module.css";
 
 const Footer = () => {
     return (
         <footer>
-            <p>&copy;Serviço de transito LTDA</p>
+            <p className={style.copyright_text}>&copy;Serviço de transito LTDA</p>
         </footer>
     )
 }
