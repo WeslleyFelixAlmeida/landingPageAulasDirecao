@@ -17,6 +17,8 @@
   padding: 0px 2px;
   display: flex;
   align-items: center;
+  right: 15px;
+  top: 120px;
 }
 
 .light_icon,
