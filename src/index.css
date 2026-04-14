@@ -1,17 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Inter, sans-serif, Arial;
+  font-family: Ubuntu, Inter, sans-serif, Arial;
 }
 
 :root {
+  --logo_url: url(/src/assets/imgs/home_imgs/Logo_sem_fundo.png);
+  --body_color: white;
   --bg_color: #f7b500;
   --wpp_color: #03a62c;
-  --text_color: #f7b500;
+  --text_color: #000000;
+  --service_text_color: black;
+  --table_bg: #ffd257;
+  --table_color: #000000;
+  --evaluation_bg: #f5f5f5;
+  --evaluation_card_bg: #ffffff;
+  --theme_button_bg: #ffffff;
 }
 
-main{
+.dark_theme {
+  --logo_url: url(/src/assets/imgs/home_imgs/logo_branca.png);
+  --body_color: #1f1f1f;
+  --bg_color: #000000;
+  --wpp_color: #03a62c;
+  --text_color: #ffffff;
+  --service_text_color: #f7b500;
+  --table_bg: #363636;
+  --table_color: #ffd257;
+  --evaluation_bg: #242424;
+  --evaluation_card_bg: #242424;
+  --theme_button_bg: rgb(71, 71, 71);
+}
+
+main {
+  background-color: var(--body_color);
   min-height: 800px;
+  overflow: hidden;
+  color: var(--text_color);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--bg_color);
 }

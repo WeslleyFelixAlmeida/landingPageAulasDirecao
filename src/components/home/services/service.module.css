@@ -12,6 +12,7 @@
     "service_grid1"
     "service_grid2";
   align-items: center;
+  box-shadow: 0px 0px 3px #f7b500;
 }
 
 .service_card > img {
@@ -26,6 +27,7 @@
   height: 100%;
   width: 100%;
   background-color: var(--bg_color);
+  color: var(--service_text_color);
   display: flex;
   align-items: center;
   justify-content: center;

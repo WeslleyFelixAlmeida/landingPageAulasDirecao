@@ -21,13 +21,14 @@
   box-sizing: border-box;
   border-radius: 10px;
   column-gap: 20px;
+  color: var(--table_color);
 }
 
 .price_table {
   border-collapse: separate;
   border-spacing: 0;
   padding: 10px;
-  background-color: var(--bg_color);
+  background-color: var(--table_bg);
   border-radius: 10px;
   height: 225px;
   width: 100%;
@@ -35,8 +36,8 @@
 }
 
 td {
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  border-right: 2px solid var(--table_color);
+  border-bottom: 2px solid var(--table_color);
   height: 50px;
 }
 
@@ -71,7 +72,7 @@ tr:last-child td {
 }
 
 .container_payment {
-  background-color: var(--bg_color);
+  background-color: var(--table_bg);
   border-radius: 10px;
   display: flex;
   flex-direction: column;

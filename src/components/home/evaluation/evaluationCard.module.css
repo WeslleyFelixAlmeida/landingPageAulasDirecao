@@ -1,7 +1,7 @@
 .evaluation_card {
   height: 270px;
   width: 200px;
-  background-color: white;
+  background-color: var(--evaluation_card_bg);
   border: solid 2px var(--bg_color);
   border-radius: 10px;
   box-shadow: 0px 0px 3px var(--bg_color);
@@ -16,6 +16,10 @@
     "evaluation_item_3 evaluation_item_3 evaluation_item_3"
     "evaluation_item_4 evaluation_item_4 evaluation_item_4";
   align-items: center;
+}
+
+.evaluation_card > p {
+  font-family: Inter, Ubuntu, sans-serif, Arial;
 }
 
 .person_name_evaluation {

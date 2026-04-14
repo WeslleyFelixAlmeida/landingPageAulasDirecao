@@ -15,10 +15,20 @@ header {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background-image: var(--logo_url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 165px;
+}
+
+.dark_theme .container_logo {
+  background-image: var(--logo_url);
 }
 
 .container_logo > img {
-  width: 110px;
+  width: 190px;
 }
 
 .container_logo > p {
